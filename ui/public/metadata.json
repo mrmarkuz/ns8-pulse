@@ -1,19 +1,20 @@
 {
-  "name": "pulse",
+  "name": "Pulse",
   "description": {
-    "en": "My pulse module"
+    "en": "Pulse is a real-time monitoring for Proxmox VE, Proxmox Mail Gateway, PBS, and Docker infrastructure with alerts and webhooks.",
+    "de": "Pulse ist ein Echtzeit Monitoring für Proxmox VE, Proxmox Mail Gateway, PBS und Docker mit Warnungen und Webhooks."
   },
-  "categories": [],
+  "categories": ["monitoring"],
   "authors": [
     {
-      "name": "Name Surname",
-      "email": "author@yourmail.org"
+      "name": "Markus Neuberger",
+      "email": "dev@markusneuberger.at"
     }
   ],
   "docs": {
-    "documentation_url": "https://docs.pulse.com/",
-    "bug_url": "https://github.com/NethServer/dev",
-    "code_url": "https://github.com/author/ns8-pulse"
+    "documentation_url": "https://github.com/rcourtman/Pulse?tab=readme-ov-file#pulse",
+    "bug_url": "https://community.nethserver.org",
+    "code_url": "https://github.com/mrmarkuz/ns8-pulse"
   },
-  "source": "ghcr.io/nethserver/pulse"
+  "source": "ghcr.io/mrmarkuz/pulse"
 }

@@ -15,16 +15,15 @@ EnvironmentFile=-%S/state/smarthost.env
 WorkingDirectory=%S/state
 Restart=always
 TimeoutStopSec=70
-ExecStartPre=/bin/mkdir -p tmp
 ExecStartPre=/bin/rm -f %t/pulse-app.pid %t/pulse-app.ctr-id
 ExecStartPre=-runagent discover-smarthost
 ExecStart=/usr/bin/podman run --conmon-pidfile %t/pulse-app.pid \
     --cidfile %t/pulse-app.ctr-id --cgroups=no-conmon \
     --pod-id-file %t/pulse.pod-id --replace -d --name  pulse-app \
-    --volume pulse-app:/var/www/html/:Z \
-    --volume ./tmp:/tmp:Z \
-    --env ENV_VAR=test \
-    ${NGINX_IMAGE}
+    --volume pulse_data:/data:z \
+    --env PULSE_AUTH_USER=admin \
+    --env PULSE_AUTH_PASS=Nethesis,1234 \
+    ${PULSE_IMAGE}
 ExecStop=/usr/bin/podman stop --ignore --cidfile %t/pulse-app.ctr-id -t 10
 ExecReload=/usr/bin/podman kill -s HUP pulse-app
 SyslogIdentifier=%u
