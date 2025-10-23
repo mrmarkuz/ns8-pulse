@@ -23,6 +23,7 @@ ExecStart=/usr/bin/podman run --conmon-pidfile %t/pulse-app.pid \
     --volume pulse-app:/data:z \
     --env PULSE_AUTH_USER=admin \
     --env PULSE_AUTH_PASS=Nethesis,1234 \
+    --env FRONTEND_PORT=8080 \
     ${PULSE_IMAGE}
 ExecStop=/usr/bin/podman stop --ignore --cidfile %t/pulse-app.ctr-id -t 10
 ExecReload=/usr/bin/podman kill -s HUP pulse-app
