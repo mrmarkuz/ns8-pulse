@@ -4,21 +4,14 @@
 
 ## Install
 
-Instantiate the module with:
-
-    add-module ghcr.io/mrmarkuz/pulse:latest 1
-
-The output of the command will return the instance name.
-Output example:
-
-    {"module_id": "pulse1", "image_name": "pulse", "image_url": "ghcr.io/nethserver/pulse:latest"}
+The app is installable via Software Center after adding the [mrmarkuz repo](https://repo.mrmarkuz.com/).
 
 ## Configure
 
-Configure the FQDN and browse to it.
+Configure the FQDN and browse to it. Then you can setup credentials and start discovering your Proxmox environment.
 
 ## Uninstall
 
-To uninstall the instance:
+It's possible via Software Center or CLI:
 
     remove-module --no-preserve pulse1
