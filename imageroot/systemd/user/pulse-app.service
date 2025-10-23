@@ -20,7 +20,7 @@ ExecStartPre=-runagent discover-smarthost
 ExecStart=/usr/bin/podman run --conmon-pidfile %t/pulse-app.pid \
     --cidfile %t/pulse-app.ctr-id --cgroups=no-conmon \
     --pod-id-file %t/pulse.pod-id --replace -d --name  pulse-app \
-    --volume pulse_data:/data:z \
+    --volume pulse-app:/data:z \
     --env PULSE_AUTH_USER=admin \
     --env PULSE_AUTH_PASS=Nethesis,1234 \
     ${PULSE_IMAGE}
