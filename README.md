@@ -6,6 +6,12 @@
 
 The app is installable via Software Center after adding the [mrmarkuz repo](https://repo.mrmarkuz.com/).
 
+### Bootstrap token
+
+To get the bootstrap token for the first login:
+
+    runagent -m pulse1 podman exec pulse-app cat /data/.bootstrap_token
+
 ## Configure
 
 Configure the FQDN and browse to it. Then you can setup credentials and start discovering your Proxmox environment.
