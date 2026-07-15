@@ -10,7 +10,7 @@ The app is installable via Software Center after adding the [mrmarkuz repo](http
 
 To get the bootstrap token for the first login:
 
-    runagent -m pulse1 podman exec pulse-app cat /data/.bootstrap_token
+    runagent -m pulse1 podman exec pulse-app /app/pulse bootstrap-token
 
 ## Configure
 
