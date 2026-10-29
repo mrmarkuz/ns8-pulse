@@ -1,8 +1,11 @@
 {
   "name": "Pulse",
   "description": {
-    "en": "Pulse is a real-time monitoring for Proxmox VE, Proxmox Mail Gateway, PBS, and Docker infrastructure with alerts and webhooks.",
-    "de": "Pulse ist ein Echtzeit Monitoring für Proxmox VE, Proxmox Mail Gateway, PBS und Docker mit Warnungen und Webhooks."
+    "en": "Pulse is a self-hosted dashboard and alerting tool for your homelab or infrastructure",
+    "de": "Pulse ist ein selbst gehostetes Dashboard- und Benachrichtigungstool für dein Homelab oder deine Infrastruktur",
+    "fr": "Pulse est un tableau de bord et un outil d’alerte auto-hébergés, destinés à votre homelab ou à votre infrastructure",
+    "it": "Pulse è uno strumento di dashboard e avvisi, ospitabile in autonomia, pensato per il tuo homelab o la tua infrastruttura",
+    "es": "Pulse es un panel de control y herramienta de alertas autohospedados para tu homelab o infraestructura"
   },
   "categories": ["monitoring"],
   "authors": [
